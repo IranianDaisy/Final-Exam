@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mailbox</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+  <section class="row">
+    <span id="Sidebar" onclick="open()">&#999;Menu</span>
+    <menu id="Menubar" class="col-2">
+      <div id="Xcloser" onclick="close()">&times;close</div>
+      <button id="NewM"><a style="color: white;" href="#">New Message</a> </button>
+
+      <button id="Inbox" onclick="InboxSlide()"><i class="fa fa-inbox" aria-hidden="true"></i>
+        <a href="#"> Inbox</a>
+        <span id="Badage" class="badge bg-dark">2</span>
+        <i style="display: none; transform: scale(0.9);" class="fa fa-sort-desc" aria-hidden="true"></i>
+        <i style="transform: scale(0.9);" class="fa fa-sort" aria-hidden="true"></i>
+      </button>
+       <div id="dropdown" class="dropdown">
+        <div class="ContentDroper">
+          <span id="NameinboxOne"></span>
+          <p id="SubjectinboxOne"></p>
+          <div id="TextinboxOne"></div>
+        </div>
+        <div class="ContentDroper">
+          <span id="NameinboxTwo" style="margin-left: 7px;"></span>
+          <div id="TextinboxTwo"></div>
+        </div>
+      </div>
+      <button>
+        <i class="fa fa-paper-plane" aria-hidden="true"></i> <a href="#">Sent</a>
+      </button>
+      <button>
+        <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+        <a href="#"> Drafts</a>
+      </button>
+      <button>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+        <a href="#">Trash</a>
+      </button>
+    </menu>
+    <article id="articless" class="col-md-9" style="display: block;">
+      <div style="color: rgb(124, 124, 124);">Subject: HBD</div>
+      <div id="Time">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <a href="#"><b>From Shamim, May 27,2024</b></a>
+      </div>
+      <button>Reply<i class="fa fa-reply" aria-hidden="true"></i></button>
+      <button>Forward<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <p id="textone">Happy birthday to my dearest friend! You bring so much joy and laughter into my life, and I'm
+        grateful for every moment we've shared. May this day be as incredible as you are!
+
+        Wishing the happiest of birthdays to the one who has been by my side through thick and thin. You are not just my
+        best friend; you are family. Cheers to many more years of amazing adventures together!</p>
+
+      <p>Best Regards<br>
+        Shamim
+      </p>
+    </article>
+    <article id="articless" class="col-sm-9">
+      <div style="color: rgb(124, 124, 124);">Subject: None</div>
+      <div id="Time">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <a href="#"><b>From Bahareh, May 27,2024</b></a>
+      </div>
+      <button>Reply<i class="fa fa-reply" aria-hidden="true"></i></button>
+      <button>Forward<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      <p id="texttwo">Today, I celebrate the person who has seen me at my best and my worst, yet loves me
+        unconditionally. Happy birthday to the one who makes life brighter just by being in it. Here's to another
+        fantastic year together!
+
+      </p>
+      <p>Best Regards<br>
+        Bahareh
+      </p>
+    </article>
+    
+    <div id="Modal" class="modal">
+      <div class="modalcontent">
+        <div id="header">
+          <div id="texthead">Compose</div>
+          <span class="closer">&times;</span>
+        </div>
+        <form action="#">
+          <label for="Email">To</label>
+          <input type="email" name="email" placeholder="example@gmail.com" required>
+          <label for="From">From</label>
+          <input type="text" placeholder="example@gmail.com" required>
+          <label for="Subject">Subject</label>
+          <input type="text">
+          <input type="text" name="message" id="message" placeholder="Write your text here">
+          <div>
+            <button type="reset" id="reset">Cancel<i class="fa fa-times" aria-hidden="true"></i></button>
+            <button type="submit" id="send">Send<i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+ 
+  </div>
+  <script src="Script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+}
+
+menu {
+    width: 250px;
+    height: 350px;
+}
+
+#Xcloser {
+    background-color: #e1e1e1;
+    display: none;
+    font-size: 25px;
+}
+
+
+menu>button {
+    text-align: left;
+    background-color: white;
+    width: 100%;
+    height: 20%;
+    border: none;
+}
+
+menu>button>a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+}
+
+#NewM {
+    color: white;
+    background-color: rgb(106, 106, 106);
+}
+
+#NewM:hover {
+    background-color:navy;
+}
+
+button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+menu>i {
+    transform: scale(1.1);
+}
+
+#Sidebar {
+    display: none;
+    font-size: 30px;
+    cursor: pointer
+}
+
+article {
+    display: none;
+}
+
+
+article>div>i {
+    transform: scale(1.5);
+    margin-right: 5px;
+}
+
+article>button {
+    padding: 6px 25px;
+    border: none;
+    background-color: rgb(235, 235, 235);
+    margin-right: 5px;
+    margin-bottom: 50px;
+    margin-top: 12px;
+}
+
+article>button>i {
+    margin-left: 15px;
+}
+
+
+#Time>a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+#Time {
+    margin-top: 8px;
+}
+
+.dropdown {
+    display: none;
+    animation: DropInboxCard .5s;
+}
+
+.ContentDroper {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgb(209, 208, 208);
+}
+
+
+.ContentDroper>span {
+    color: rgb(163, 163, 163);
+}
+
+.ContentDroper:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modalcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    width: 60%;
+    max-width: 800px;
+    /*vh*/
+    max-height: 500px;
+    height: auto;
+  animation: ModalAnimate .5s;
+}
+
+form {
+    padding: 30px;
+}
+
+form>label {
+    font-weight: bold;
+    font-size: 14.5px;
+}
+
+form>label,
+form>input {
+    display: block;
+
+}
+
+form>input {
+    width: 100%;
+    height: 30px;
+}
+
+#header {
+    padding: 15px;
+    background-color:navy;
+}
+
+#texthead {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+form>div>button {
+    padding: 5px 15px;
+    border: none;
+    margin-top: 15px;
+}
+
+form>div>button>i {
+    margin-left: 5px;
+}
+
+#message {
+    color: rgb(144, 144, 144);
+    margin-top: 10px;
+    height: 130px;
+}
+
+#reset {
+    background-color: navy;
+    color: white;
+}
+
+#reset>a {
+    color: white;
+}
+
+#send {
+    float: right;
+}
+
+#send,
+#send>a {
+    color: rgb(0, 0, 0);
+}
+
+.closer {
+    position: absolute;
+    transition: 0.5s;
+    top: 2px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.closer:hover,
+.closer:focus {
+    color: #4c4c4c;
+    cursor: pointer;
+    transform: scale(1.5);
+    text-decoration: none;
+
+}
+
+#noDevicesupported {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+@keyframes DropInboxCard {
+    from {
+        transform: translateX(-410px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes ImageArticle {
+    from {
+        transform: translateY(-410px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+@keyframes ModalAnimate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-height: 470px) {
+    menu {
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-height: 649px) {
+    article {
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    menu {
+        width: 90%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        overflow-y: auto;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #Menubar {
+        width: 90%;
+    }
+
+    menu>button {
+        height: 7%;
+        font-size: 12px;
+
+    }
+
+    #Xcloser {
+        display: block;
+    }
+
+    #Si {
+        display: block;
+    }
+
+    .modalcontent {
+        max-width: 900px;
+        width: 75%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form>label {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    menu {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    menu>button {
+        font-size: 10px;
+        height: 6%;
+    }
+
+    #Xcloser {
+        font-size: 15px;
+
+    }
+
+    form>label {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    form>input {
+        width: 100%;
+        height: 15px;
+    }
+
+    #header {
+        padding: 7px;
+    }
+
+    #texthead {
+        padding-left: 10px;
+        color: white;
+        font-size: 23px;
+    }
+
+    form>div>button {
+        padding: 3px 11px;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .closer {
+        font-size: 30px;
+    }
+
+    #ContentDroper {
+        padding: 5px 10px;
+        border-bottom: 1px solid rgb(209, 208, 208);
+        max-height: 155px;
+        overflow: hidden;
+    }
+
+    #ContentDroper>p {
+        font-size: 11px;
+    }
+
+
+    #ContentDroper>div {
+        font-size: 10px;
+
+    }
+
+    #ContentDroper>span {
+        font-size: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 448px) {
+    #Badage {
+        transform: scale(0.7);
+    }
+
+}
+
+@media screen and (max-width: 250px) {
+    #noDevicesupported {
+        display: block;
+    }
+
+    #Sidebar {
+        display: none;
+    }
+}
